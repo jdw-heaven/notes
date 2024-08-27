@@ -83,6 +83,37 @@ Notes:
 - 命令对常规变量和缓存变量无效
 - 对于依赖于其他选项值的变量可以参考[`CMakeDependentOption`][CMakeDependentOption]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [cmake_minimum_required]: https://cmake.org/cmake/help/v3.28/command/cmake_minimum_required.html#cmake-minimum-required "cmake_minimum_required"
 [project]: https://cmake.org/cmake/help/v3.28/command/project.html#project "project"
 [CMakeDependentOption]: https://cmake.org/cmake/help/v3.28/module/CMakeDependentOption.html#module:CMakeDependentOption "CMakeDependentOption"
