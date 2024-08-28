@@ -1,14 +1,14 @@
 ---
 title: Markdown Tips
 tags:
-  - Test
+  - Markdown
 ---
 
 Markdown 是一个非常方便的轻量级标记语言，非常适合平时用来写写笔记、小论文以及个人主页。  
 
 本文将介绍我在使用 Markdown 时的一些经验以及近乎所有的 Markdown 语法列表及注意事项。  
 
-⚠️ **本文部分内容具有一定的平台(VSCode and My Jekyll Blog Theme)依赖，不同的平台在 Markdown 语法的支持上存在差异，因此部分内容仅供参考。下面说的 Jekyll 指的是我的Jekyll Blog主题，可以通过我的 [GitHub][github] 仓库查看具体的代码。**  
+⚠️ **本文部分内容具有一定的平台(VSCode and My Jekyll Blog Theme)依赖，不同的平台在 Markdown 语法的支持上存在差异，因此部分内容仅供参考。下面说的 Jekyll 指的是我的 Jekyll Blog 主题，可以通过我的 [GitHub][github] 仓库查看具体的代码。**  
 
 
 ## VS Code Plugins  
@@ -16,11 +16,11 @@ Markdown 是一个非常方便的轻量级标记语言，非常适合平时用�
 
 ### Markdown Preview Enhanced  
 
-一个非常好的插件，支持预览以及导出各种格式，如pdf、png、html等；同时自带多种主题，还可以通过CSS自定义样式。缺点就是对于 CSS 语法的兼容性不怎么好，对新手以及非前端工作者比较不友好。  
+一个非常好的插件，支持预览以及导出各种格式，如 pdf、png、html 等；同时自带多种主题，还可以通过CSS自定义样式。缺点就是对于 CSS 语法的兼容性不怎么好，对新手以及非前端工作者比较不友好。  
 
 详细功能请参照[官方文档][markdown-preview-enhanced]。  
 
-另外，给一个比较好的 CSS [主题] [css-theme]。在导出长代码的时侯，主题会出问题，可以通过添加下面的语句解决：
+另外，给一个比较好的 CSS [主题][css-theme]。在导出长代码的时侯，主题会出问题，可以通过添加下面的语句解决：
 
 ```css
   @media print {
@@ -37,7 +37,7 @@ Markdown 是一个非常方便的轻量级标记语言，非常适合平时用�
 
 ✏️ **VS Code 插件 Markdown Preview Enhanced 渲染的围栏式（前后三个反引号包围的）代码块 HTML 代码为 `<pre><code> ... </code></pre>`（整个 Markdown 文档只有一个 `<div>` 标签），而 Jekyll 渲染的则是 `<div><pre><code> ... </code></pre></div>`。**  
 
-对于我而言，这一个插件就够用了。我Blog主题的作者还推荐了两款用来规范格式的插件，有利于优化写作的习惯，但是很难处理上面说的平台对 Markdown 语法的支持问题，因此格式这方面我认为自己把控比较好。想了解的可以参考其文章，同时我下面提到的排版技巧也出自这篇文章：  
+对于我而言，这一个插件就够用了。我 Blog 主题的作者还推荐了两款用来规范格式的插件，有利于优化写作的习惯，但是很难处理上面说的平台对 Markdown 语法的支持问题，因此格式这方面我认为自己把控比较好。想了解的可以参考其文章，同时我下面提到的排版技巧也出自这篇文章：  
 
 [Markdown 写作心得][markdown-writing]
 
@@ -52,20 +52,20 @@ Markdown 是一个非常方便的轻量级标记语言，非常适合平时用�
 ### 图片插入
 
 - 本地
-  - 不建议，兼容性较差，除非你导出pdf
+  - 不建议，兼容性较差，除非你导出 pdf
 - 图床
-  - 推荐GitHub仓库+jsdelivr
+  - 推荐 GitHub 仓库 + jsdelivr
   - 优点：免费、稳定、支持图片压缩、支持图片缓存、支持图片防盗链
   - 缺点：图片管理麻烦、图片上传后可能需要一段时间才能访问到
   - 步骤：
-    1. 注册GitHub账号，新建仓库
+    1. 注册 GitHub 账号，新建仓库
     2. 上传图片到仓库
-    3. 获取图片链接，如`https://cdn.jsdelivr.net/gh/username/repo@latest/image.png`
-    4. 在Markdown中插入图片链接
+    3. 获取图片链接，如 `https://cdn.jsdelivr.net/gh/username/repo@latest/image.png`
+    4. 在 Markdown 中插入图片链接
 - Base64 编码
   - 直接将图片编码，可能会比较长
 
-一般来说，对于大一点的图片，用图床比较好；小一点的文件直接用压缩然后用Base64编码插入就好。下面是一个图片压缩工具以及 Base64 编码工具的链接：  
+一般来说，对于大一点的图片，用图床比较好；小一点的文件直接用压缩然后用 Base64 编码插入就好。下面是一个图片压缩工具以及 Base64 编码工具的链接：  
 
 - [图片压缩工具][image-compress]  
 - [Base64 编码工具][base64-encoder]  
@@ -115,7 +115,7 @@ Markdown 使用空行将两个段落隔开，对应于 HTML 中的 `<p>` 标签�
 | --- | --- | --- |
 | This is the first line.**(there's two or more spaces, you can also use `<br>`)**<br>And this is the second line. | `<p>This is the first line.<br>And this is the second line.</p>` | This is the first line.<br>And this is the second line. |
 
-⚠️ **不要使用在一行后加反斜杠 \\ 或者什么都不加来代表换行；但是在VS Code中，换行也可以用回车键表示。**
+⚠️ **不要使用在一行后加反斜杠 \\ 或者什么都不加来代表换行；但是在 VS Code 中，换行也可以用回车键表示。**
 
 
 ### Emphasis
@@ -126,7 +126,7 @@ Markdown 使用空行将两个段落隔开，对应于 HTML 中的 `<p>` 标签�
 | I just love \_\_blod text\_\_. | `I just love <strong>blod text</strong>` | I just love __blod text__ |
 | Love\*\*is\*\*bold | `Love<strong>is</strong>bold` | Love**is**bold |
 
-⚠️ **不要这样用`Love__is__bold`。**
+⚠️ **不要这样用 `Love__is__bold` 。**
 
 
 ### Italic
@@ -137,7 +137,7 @@ Markdown 使用空行将两个段落隔开，对应于 HTML 中的 `<p>` 标签�
 | Italicized text is the \_cat's meow\_. | `Italicized text is the <em>cat's meow</em>.` | Italicized text is the _cat's meow_. |
 | A\*cat\*meow | `A<em>cat</em>meow` | A*cat*meow |
 
-⚠️ **不要用`A_cat_meow`。**  
+⚠️ **不要用 `A_cat_meow` 。**  
 
 
 ### Bold and Italic
@@ -150,7 +150,7 @@ Markdown 使用空行将两个段落隔开，对应于 HTML 中的 `<p>` 标签�
 | This text is \*\*\_really important\_\*\*. | `This text is <em><strong>really important</strong></em>.` | This text is **_really important_**. |
 | This is really\*\*\*very\*\*\*important text. | `This is really<em><strong>very</strong></em>important text.` | This is really***very***important text. |
 
-⚠️ **不要这样写`This is really__very__important text.`。**  
+⚠️ **不要这样写 `This is really__very__important text.` 。**  
 
 
 ### Blockquotes
@@ -216,7 +216,7 @@ Markdown 使用数字加点 `.` 加空格表示有序列表，减号 `-` 、星�
 并使用 `tab` 键缩进表示子列表。对应于 HTML 中的 `<li>` 标签。  
 对于有序列表，数字可以是乱序的，不影响正常渲染。
 
-⚠️ **对某些平台可用，但不建议使用。**
+⚠️ **对某些平台可用，但不建议使用:**
 
 ```md
 + First item
@@ -338,7 +338,7 @@ unordered lists in an ordered lists, or vice verse.
 | --- | --- | --- |
 | At the command prompt, type \`nano\`. | `At the command prompt, type <code>nano</code>.` | At the command prompt, type <code>nano</code>. |
 
-✏️ **这里有个奇怪的Bug，第三个单元格的内容如果是 `` At the command prompt, type `nano` ``，那么渲染出来的结果会与第二个单元格合在一起；但第一个单元格如果是 `` At the command prompt, type `nano` ``，渲染出来的结果是正常的。因此最后只能用 HTML 标签 `<code> ... </code>` 来解决这个问题。**
+✏️ **这里有个奇怪的 Bug，第三个单元格的内容如果是 `` At the command prompt, type `nano` ``，那么渲染出来的结果会与第二个单元格合在一起；但第一个单元格如果是 `` At the command prompt, type `nano` ``，渲染出来的结果是正常的。因此最后只能用 HTML 标签 `<code> ... </code>` 来解决这个问题。**
 
 #### Escaping Backticks
 
@@ -388,13 +388,13 @@ _________________
 
 `My favorite search engine is [Duck Duck Go](https://duckduckgo.com).`
 
-My favorite search engine is [Duck Duck Go] [duckduckgo].
+My favorite search engine is [Duck Duck Go][duckduckgo].
 
 #### Adding Titles
 
 `My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").`
 
-My favorite search engine is [Duck Duck Go] [duckduckgo].
+My favorite search engine is [Duck Duck Go][duckduckgo].
 
 #### URLs and Email Addresses
 
@@ -415,8 +415,8 @@ This is the *[Markdown Guide](https://www.markdownguide.org)*.
 See the section on [`code`](#code).
 ```
 
-I love supporting the **[EFF] [eff]**.  
-This is the *[Markdown Guide] [markdown-guide]*.  
+I love supporting the **[EFF][eff]**.  
+This is the *[Markdown Guide][markdown-guide]*.  
 See the section on [`code`](#code).  
 
 **If there are more than one headings are called `code`, `#code` means the first. So it's a good habit to use unique headings for each section or other content with labels.**
@@ -838,7 +838,7 @@ or:
 - Pi (π) — &#960;
 ```
 
-> For a complete list of available HTML entities, refer to Wikipedia’s page on [HTML entities](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
+> For a complete list of available HTML entities, refer to Wikipedia’s page on [HTML entities][html-entities].
 
 
 ### Table Formatting
@@ -896,6 +896,13 @@ or:
 [![Less Than Jake — Scott Farcas Takes It On The Chin][less-than-jake]][youtube-less-than-jake]
 
 
+## Appendix
+
+[Markdown 写作心得][markdown-writing]
+
+[Markdown Guide][markdown-guide]
+
+
 [github]: https://github.com/jdw-heaven  "My GitHub Homepage"
 [markdown-preview-enhanced]: https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/  "Markdown Preview Enhanced"  
 [css-theme]: https://learnku.com/users/57474  "CSS Theme"  
@@ -917,6 +924,7 @@ or:
 [admonition_css]: https://cdn.jsdelivr.net/gh/jdw-heaven/images01@main/Admonition_css.png  "Admonition_css"  
 [less-than-jake]: https://lh3.googleusercontent.com/Bi3G-B-E-xb3Axoi2ph_txwc8qAiOk_hlkMMMGXMCCPh22zfGWuX4x6fOj1CtMacaeyx7jch-mUlAGM  "Less Than Jake — Scott Farcas Takes It On The Chin"  
 [youtube-less-than-jake]: https://www.youtube.com/watch?v=PYCxct2e0zI  "Less Than Jake — Scott Farcas Takes It On The Chin"  
+[html-entities]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references  "List of XML and HTML character entity references"  
 
 
 

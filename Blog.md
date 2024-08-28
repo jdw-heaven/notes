@@ -9,6 +9,7 @@
 1.打印自调整，TOC，长代码自动换行
 2.中英文Blog
 3.note\ warning\ tips\ info等标签样式
+4.多级标签
 
 ## Note
 
